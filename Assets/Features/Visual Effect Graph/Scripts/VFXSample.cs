@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.VFX;
 
 
-public class SampleSecne : MonoBehaviour
+public class VFXSample : MonoBehaviour
 {
 
     [SerializeField] private VisualEffect vfx;
