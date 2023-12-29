@@ -14,7 +14,7 @@ public class DownloadTextureSample : MonoBehaviour
 
     public async void DownloadAndShowTexture()
     {
-        var texture = await DownloadTexture();
+        var texture = await DownloadTexture(pictureUrl);
         if (texture != null)
         {
             //set texture in raw image
@@ -28,9 +28,9 @@ public class DownloadTextureSample : MonoBehaviour
         }
     }
 
-    private async Task<Texture2D> DownloadTexture()
+    private async Task<Texture2D> DownloadTexture(string url)
     {
-        var req = UnityWebRequestTexture.GetTexture(pictureUrl);
+        var req = UnityWebRequestTexture.GetTexture(url);
         req.SendWebRequest();
         while (!req.isDone)
             await Task.Yield();
