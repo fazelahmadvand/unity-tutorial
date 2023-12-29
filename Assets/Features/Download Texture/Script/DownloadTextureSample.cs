@@ -7,10 +7,7 @@ using UnityEngine.UI;
 
 public class DownloadTextureSample : MonoBehaviour
 {
-
     [Multiline][SerializeField] private string pictureUrl;
-
-
     [Header("UI Elements")]
     [SerializeField] private RawImage rawImage;
     [SerializeField] private Image img;
@@ -29,12 +26,7 @@ public class DownloadTextureSample : MonoBehaviour
             img.sprite = sprite;
 
         }
-
-
     }
-
-
-
 
     private async Task<Texture2D> DownloadTexture()
     {
